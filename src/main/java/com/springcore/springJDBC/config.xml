@@ -19,4 +19,9 @@
 			<ref bean="ds" />
 		</property>
 	</bean>
+	<bean class="com.springcore.springJDBC.dao.StudentDaoImpl" name="studentDao">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
 </beans>
