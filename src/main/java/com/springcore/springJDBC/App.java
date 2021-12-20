@@ -13,12 +13,17 @@ public class App
     	System.out.println("Program is getting Started...");
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("com/springcore/springJDBC/config.xml");
         StudentDao bean = applicationContext.getBean("studentDao",StudentDao.class);
+		/*
+		  Student student=new Student(); 
+		  student.setId(999); 
+		  student.setName("John");
+		  student.setCity("Lucknow");
+		 */
         Student student=new Student();
-        student.setId(999);
-        student.setName("John");
-        student.setCity("Lucknow");
-        
-        int r=bean.insert(student);
+        student.setId(456);
+        student.setName("Sejal");
+        student.setCity("Bareilly");
+        int r=bean.change(student);
         System.out.println(r);
     }
 }
