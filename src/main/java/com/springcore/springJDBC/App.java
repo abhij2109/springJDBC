@@ -3,7 +3,7 @@ package com.springcore.springJDBC;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.springcore.springJDBC.dao.StudentDao;
 import com.springcore.springJDBC.entities.Student;
@@ -11,15 +11,14 @@ import com.springcore.springJDBC.entities.Student;
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Program is getting Started...");
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext(
-				"com/springcore/springJDBC/config.xml");
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(JdbcConfig.class);
 		StudentDao bean = applicationContext.getBean("studentDao", StudentDao.class);
 		// INSERT
 
 		Student student = new Student();
-		student.setId(888);
-		student.setName("Rohan");
-		student.setCity("Moradabad");
+		student.setId(111);
+		student.setName("Mohan");
+		student.setCity("Loradabad");
 		int r=bean.insert(student);
 		System.out.println(r);
 
