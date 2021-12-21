@@ -1,4 +1,5 @@
-Spring JDBC configuration and Performing all CRUD operations.
+Spring JDBC configuration and Performing all CRUD operations by 
+Removing config.xml and adding JDBCconfig.java file
 
 1. Creation of Table by using query and firing it from code.
 2. Creating DAO layer and providing implementation classes.
