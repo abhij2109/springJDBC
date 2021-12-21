@@ -5,3 +5,4 @@ Spring JDBC configuration and Performing all CRUD operations.
 3. Insertion of data in existing table.
 4. Updation of data in table.
 5. Deletion from table.
+6. Selection of single and multiple objects.
