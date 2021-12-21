@@ -6,3 +6,4 @@ Spring JDBC configuration and Performing all CRUD operations.
 4. Updation of data in table.
 5. Deletion from table.
 6. Selection of single and multiple objects.
+Removing config.xml and adding JDBCconfig.java file in new branch withoutXML.
