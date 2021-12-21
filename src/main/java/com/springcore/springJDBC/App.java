@@ -1,6 +1,7 @@
 package com.springcore.springJDBC;
 
 import java.util.List;
+import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -10,15 +11,17 @@ import com.springcore.springJDBC.entities.Student;
 
 public class App {
 	public static void main(String[] args) {
-		System.out.println("Program is getting Started...");
+		System.out.println("!!!___Program is getting Started___!!!");
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(JdbcConfig.class);
 		StudentDao bean = applicationContext.getBean("studentDao", StudentDao.class);
-		// INSERT
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the operation number...");
+		int ch=sc.nextInt();
 
 		Student student = new Student();
-		student.setId(111);
-		student.setName("Mohan");
-		student.setCity("Loradabad");
+		student.setId(666);
+		student.setName("Mayra");
+		student.setCity("Baulmer");
 		int r=bean.insert(student);
 		System.out.println(r);
 
@@ -33,6 +36,7 @@ public class App {
 		 * System.out.println(r);
 		 */
 
+		
 		// DELETE
 
 		/*
